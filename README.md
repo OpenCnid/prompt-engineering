@@ -52,7 +52,7 @@ collaborator.
 
 ```bash
 git clone https://github.com/OpenCnid/prompt-engineering.git
-cp -r prompt-engineering ~/.claude/skills/prompt-engineering
+cp -r prompt-engineering/.claude/skills/prompt-engineering ~/.claude/skills/
 ```
 
 Or install it with the rest of the stack:
