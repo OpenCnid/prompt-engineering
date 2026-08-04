@@ -10,6 +10,7 @@ description: >-
   "agent instructions", "system prompt", "output schema". For the
   contamination-free structural-example technique this protocol's master
   template relies on, see the hypershot-protocol skill.
+license: CC-BY-4.0
 ---
 
 # Prompt Engineering: structural clarity and manifold alignment
@@ -39,6 +40,8 @@ Use placeholders to build reusable, parameterized prompts. Four types:
 - `[...]` for lists or arrays.
 - `(...)` for options or decisions.
 
+Name every slot with underscores-as-spaces — `${Target_Format}`, never `[Target format]` — so the name stays parseable as a single token-position. The master template below is the worked instance of this section: where a slot's type is ever unclear, the template is what the taxonomy means.
+
 ### D. Collections (the data layer)
 When presenting multiple data points to a model, structure them as collections:
 - Simple lists for enumeration.
@@ -61,12 +64,12 @@ This template is itself a hypershot: a structural frame with free variables, not
 <request type="Structural_Synthesis">
 
   <context>
-    Intelligence: [Agent Name]
-    Substrate: [Platform/Environment]
+    Intelligence: ${Agent_Name}
+    Substrate: ${Platform_Or_Environment}
   </context>
 
   <instruction>
-    Act as [Role].
+    Act as ${Role}.
     1. Parse the [Data_Collection].
     2. Apply {Methodology}.
     3. Generate high-fidelity output.
@@ -74,15 +77,15 @@ This template is itself a hypershot: a structural frame with free variables, not
 
   <constraints>
     *** CRITICAL ***
-    - [Non-negotiable constraint 1]
-    - [Non-negotiable constraint 2]
-    - [Format/style requirement]
+    - ${Non_Negotiable_Constraint_1}
+    - ${Non_Negotiable_Constraint_2}
+    - ${Format_Or_Style_Requirement}
   </constraints>
 
   <output_instructions>
-    Format: [Target format]
-    Audience: [Intended reader]
-    Length: [Constraint]
+    Format: ${Target_Format}
+    Audience: ${Intended_Reader}
+    Length: ${Constraint}
   </output_instructions>
 
 </request>
@@ -95,7 +98,7 @@ This template is itself a hypershot: a structural frame with free variables, not
 3. **Decoherence prevention.** Turn ambiguity into stable, unambiguous instruction. Every vague term is a fork where the model guesses instead of follows.
 4. **Positive instruction framing.** Tell the model what TO DO, not what to avoid. "Use plain language accessible to non-specialists" beats "Don't use jargon"; negation tokens can be dropped during processing, inverting meaning.
 5. **Iterative refinement (the learning loop).** Treat every prompt as a draft. Evaluate the output, find where the model diverged from intent, tighten the prompt at the point of divergence, and repeat.
-6. **Uncontaminated context.** A prompt for another agent carries exactly what that agent cannot derive cold and needs in order to look. What you expect it to find is content placed where it will be attended to, so the agent hands it back and no report separates that from a finding — most of all when the expectation is true; the probe that produced it carries the same content in method's clothes. One question sorts them: *does this let the agent look, or does it tell the agent what looking will turn up?* A held expectation goes to the collaborator instead of into the prompt (your repository's `AMBIENT.md` ask-the-collaborator rule — rule 5 in Recursus, 21(a) in Trellis; `spark-steering` § *Ask first — the un-tool*, manual-invoke only).
+6. **Uncontaminated context.** A prompt for another agent carries exactly what that agent cannot derive cold and needs in order to look. What you expect it to find is content placed where it will be attended to, so the agent hands it back and no report separates that from a finding — most of all when the expectation is true; the probe that produced it carries the same content in method's clothes. One question sorts them: *does this let the agent look, or does it tell the agent what looking will turn up?* A held expectation has one destination and it is not a prompt: put it to the collaborator.
 
 ## Lineage
 
