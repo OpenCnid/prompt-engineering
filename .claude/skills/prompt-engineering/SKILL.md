@@ -100,7 +100,7 @@ This template is itself a hypershot: a structural frame with free variables rath
 
 ## Best practices
 
-1. **Topological mapping.** Map the informatic distance between the prompt's starting state and the desired output before you generate — understand the shape of the problem before proposing a shape for the solution.
+1. **Topological mapping.** Map the informatic distance between the prompt's starting state and the desired output before you generate. Locate the work on the axes that will shape it — how much structure it needs, what it must do, how much of the reasoning it should carry, how bounded its context is, what kind of knowledge it rests on — and let those positions decide the prompt's form. Understand the shape of the problem before proposing a shape for the solution.
 2. **Phase alignment.** Match tone, register, and technical depth to the context. A prompt for a 12-year-old and a prompt for a domain expert should differ in more than vocabulary.
 3. **Decoherence prevention.** Turn ambiguity into stable, unambiguous instruction. Every vague term is a fork where the model guesses instead of follows.
 4. **Positive instruction framing.** Tell the model what TO DO, not what to avoid. "Make it exciting and engaging" beats "Don't make it boring"; negation words like "don't" or "not" can be lost during processing, inverting your meaning. Positive framing creates fault-tolerant instructions that maintain their core meaning even if some processing degradation occurs. Where a prohibition genuinely is the constraint, state it sparingly and give it emphasis.
@@ -109,6 +109,6 @@ This template is itself a hypershot: a structural frame with free variables rath
 
 ## Lineage
 
-Derived from the Lexideck Prompt Engineering Curriculum, "Talking to AIs Effectively," a nine-part series by Matthew Murphy. Sections A–E compress Parts 4–8, one to one and in the order Part 3 sets out. Best practices 4 and 5 come from Parts 1 and 9. Practices 1 and 3 come from Murphy's WonderSuite prompts rather than from this curriculum; practice 6 and the master template are OpenCnid's, written in the curriculum's idiom rather than compressed from it.
+Derived from the Lexideck Prompt Engineering Curriculum, "Talking to AIs Effectively," a nine-part series by Matthew Murphy. Sections A–E compress Parts 4–8, one to one and in the order Part 3 sets out. Best practices 4 and 5 come from Parts 1 and 9. Practices 1 and 3 come from Murphy's WonderPrompt — the topological meta-prompt framework in WonderSuite 2.0, whose Purpose Mapping and Coherence Calibration they compress — rather than from this curriculum. Practice 6 and the master template are OpenCnid's, written in the curriculum's idiom rather than compressed from it.
 
 The curriculum carries a novice to an intermediate level and remains the canonical authority; this skill is the deployed artifact, addressed to a reader who is already past that. Departures, omissions, and their rulings are recorded in `DEVIATIONS.md`. Full curriculum on Patreon (patreon.com/c/LexideckTechnologies).

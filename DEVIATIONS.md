@@ -193,17 +193,53 @@ further upstream to consult; the nine PDFs are the source of record. The
 "Assignment 2" reference in Part 6 remains unexplained but no longer implies
 missing prose.
 
+### 2026-08-03 · WonderPrompt read — practices 1 and 3 verified
+`WonderPrompt.txt`, mirrored at `OpenCnid/axes-of-wonder` from
+`gusthemole/WonderSuite` (GPL-3.0), read in full. It is a 10 KB system prompt
+titled "Topological Meta-Prompt Engineering Framework." Both practices trace, and
+the document settles two further questions the curriculum could not.
+
+**Practice 1 · Topological mapping** is its Navigational Protocol step 1, *Purpose
+Mapping* — locate a prompt's position across five dimensional axes (structural,
+functional, cognitive, contextual, epistemological), each a set of bipolar
+continua. **The source ships a procedure the compression dropped**, which is
+exactly what independent review had flagged as practice 1's defect: words spent,
+no action licensed. The procedure is now restored in the skill's own terms rather
+than transcribed.
+
+**Practice 3 · Decoherence prevention** is step 2, *Coherence Calibration* —
+"ensuring structural integrity across components, aligning functional
+capabilities with purpose." The skill's name is that inverted.
+
+**Open question on practice 3.** The source's coherence is *architectural* —
+components aligned with purpose. The skill's practice is about *ambiguity* — "every
+vague term is a fork where the model guesses." Those are different failures. The
+name traces; the content may be a merge of WonderPrompt's coherence with the
+curriculum's `Reduced Ambiguity` (Part 4) and `Enhanced Precision` (Part 3).
+Recorded, not edited — untangling it is Murphy's call.
+
+**The hypershot ancestor is here, and it is explicit.** WonderPrompt's *Open
+Variable Encoding Protocol* states that open variables "can encode not just
+content placeholders but complete instruction mechanisms," with the form
+`{OperationName(parameters, contextual_conditions, adaptation_rules)}` and a set
+of named primitive operations. This is the instruction-bearing variable that
+`hypershot-protocol` Rule B describes, predating it — and it is a third
+independent confirmation that `{...}` denotes a callable, not an unspecified
+variable (B9).
+
+The three artifacts are therefore one lineage rather than three neighbours:
+WonderPrompt's open variables → hypershot's continuum → this skill's §C fills.
+That relationship is currently stated nowhere.
+
 ### Open — awaiting Cnid
-- **The WonderPrompt document is not on this machine.** Murphy pointed to it —
-  *"See also: the WonderPrompt document in axes of wonder repo… It moves into
-  topological prompting and decoherence prevention while itself teaching the
-  essence of hypershots"* — as the source for practices 1 and 3. `D:\wonderprompt`
-  is an unrelated skill-authoring research repo, and no "axes of wonder"
-  directory exists locally. **Practices 1 and 3 are therefore credited to
-  WonderSuite in the lineage but not yet checked against it**, and nothing new
-  has been written about topological primitives. Reading that document is the
-  next thing that would move the register; writing toward it without reading it
-  would be exactly the overfit Murphy cautioned against.
+- **Licence: WonderSuite is GPL-3.0; this repository is CC BY 4.0.** Practices 1
+  and 3 descend from `WonderPrompt.txt`, mirrored at `OpenCnid/axes-of-wonder`
+  from `gusthemole/WonderSuite` under GPL-3.0. The skill reproduces none of that
+  document's text — the practices are short paraphrases of its Purpose Mapping
+  and Coherence Calibration steps, and method is not expression — so this is
+  probably a non-issue. Flagged rather than settled because a licence question is
+  the owner's to answer, not an agent's, and because the credit is currently
+  carried in prose with no licence note attached.
 - **Whether to update `hypershot-protocol` to match.** Murphy raised it and
   conditioned it on the owner: *"If necessary, and with the owner's permission,
   you can update your hypershot skill, too."* The change would be small — that
@@ -850,13 +886,7 @@ question (there is no further upstream). B8 is withdrawn: practices 1 and 3
 descend from WonderSuite.
 
 **Still open:** the rest of Class B, Class C's remaining items, and Class E, which
-is the largest group and entirely untouched. The register's own error rate is now
-part of the record — two findings were overturned by provenance the register did
-not have, both in the direction of accusing the compression of invention where
-there was descent.
-
-**The next thing that would move this** is the WonderPrompt document, which is not
-on this machine.
+is the largest group and entirely untouched.
 
 Both rulings are recorded in full in the ruling log above, including the
 precedent about false binaries that bears on the six Class D items still open.
