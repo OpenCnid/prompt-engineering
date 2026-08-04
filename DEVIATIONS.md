@@ -1,8 +1,9 @@
 # Deviation register
 
-*Working document. Nothing here is a change to the skill — this file records
-where the shipped artifact stands relative to the work it credits, so that a
-later session can act without re-deriving the question item by item.*
+*Working document. It records where the shipped artifact stands relative to the
+work it credits, who has ruled on what, and what remains open — so a later
+session can act without re-deriving any of it. Entries are closed by a named
+authority on a dated ruling, never by inference.*
 
 ## Why this file exists
 
@@ -39,6 +40,81 @@ Each entry names the gate it must pass, not how bad it is.
 Class A is the largest group and none of it is blocked. Class D is the group
 that must not be edited on current-model reasoning, however well-evidenced that
 reasoning is.
+
+## Authorities
+
+Two people close entries in this register, and they close different things.
+
+| Authority | Governs | Basis |
+|---|---|---|
+| **Cnid** — OpenCnid Labs | Scope, sequencing, what ships, repository identity, whether a departure is worth making at all | Owns the repository and this compression of the method |
+| **Matthew Murphy** | What the method *is*: the meaning of a primitive, the shape of a technique, whether a reading of the curriculum is correct | Authored the curriculum, which `README.md` names the canonical authority |
+
+Class D is provenance, so it is Murphy's by construction. Classes A, B and C are
+Cnid's to schedule — though an individual item can still turn on a question only
+Murphy can answer, which is what happened with A2 and A3. When it does, the item
+is referred rather than decided, and the referral is recorded below.
+
+Neither authority is assumed. Nothing in this register was closed by inference
+about what someone would probably want.
+
+## Ruling log
+
+### 2026-08-03 · Cnid · the fidelity route
+Four routes were on the table for reconciling "the curriculum is the canonical
+authority" with a set of evidence-backed corrections. Cnid chose **marking
+deviations explicitly** — keep the compression identity and the A–E mapping
+intact, and record departures rather than smuggle or suppress them — and scoped
+this session to producing the mark, with the fixes to follow separately. This
+file is that decision's artifact.
+
+### 2026-08-03 · Cnid · Class A dispositions
+Item by item: fix A1, A4, A5, A6, A7, A8; refer A2 and A3 to Murphy. On A1 the
+direction was given rather than left open — *"the taxonomy needs to derive from
+the master template. It was a mistake we need to fix."* On A4, use
+underscores-as-spaces as the companion skill instructs. On A6, *"fix it
+properly"* — read as covering both shells, the upgrade path, and
+`CLAUDE_CONFIG_DIR`, not only the missing `mkdir`.
+
+Also authorized: task chips for the four sibling repositories carrying the same
+install defect, plus self-play, which is not cloned locally.
+
+### 2026-08-03 · Murphy · `...` is a primitive, not a type
+On A2. The spread operator and the ellipsis are the same token doing the same
+work — *"We're applying structure to the null-array itself, which contains all
+arrays. It's simply structural."* A primitive composes **inside** a container:
+it *"can go inside `{}`, `()`, `[]`, `<></>`, etc."* Therefore `${...}` and
+`(...)` were never unexercised types; they are containers shown holding the
+primitive, and the section's error was reading its own notation as four parallel
+types. Instruction given: *"simplify and pre-define the primitives better,"* and
+*"fix it with confidence and absent any hedging."*
+
+Closes A2 and D2. Applied in §C, rebuilt as containers × fill.
+
+### 2026-08-03 · Murphy · a tag name is a categoric primitive
+On A3. *"The question is malformed."* The tag vocabulary is open — *"It can be
+tasks, instructions, context, data, persona, any blanket category"* — and
+categoric primitives are the operative technique, inherited from hypershots. So
+neither `<task>` nor `<instruction>` is canonical, and the defect was never the
+mismatch between §A and the template; it was §A presenting four tags as a closed
+set.
+
+Closes A3 and D1. Applied in §A.
+
+**Precedent worth carrying.** Both rulings answered by rejecting the question's
+framing rather than choosing between the options it offered. Before treating any
+remaining Class D item as a binary between two things the artifact says, check
+whether the artifact is offering a false choice. D3, D5 and D6 all read as
+candidates.
+
+### Open — awaiting Cnid
+- **Whether to update `hypershot-protocol` to match.** Murphy raised it and
+  conditioned it on the owner: *"If necessary, and with the owner's permission,
+  you can update your hypershot skill, too."* The change would be small — that
+  skill's continuum does not say `...` composes inside containers, nor that a
+  tag name is itself a categoric primitive, so the two skills currently describe
+  one model in two compatible vocabularies rather than one. Not started.
+- **Whether this file ships publicly.** See Status.
 
 ## Disposition of Class A — 2026-08-03
 
@@ -394,17 +470,17 @@ Matthew Murphy on 2026-08-03 and applied — his ruling also closed D1 and D2,
 since both turned on the same two questions. Classes B and C are untouched.
 Class D retains six open items.
 
-Murphy's ruling is the precedent worth carrying forward: both questions were
-answered by rejecting their framing rather than by choosing a side. `...` is a
-primitive that goes inside containers, not a fifth container; a tag name is a
-categoric primitive drawn from an open vocabulary, not an entry in a closed set
-of four. Where a Class D item looks like a binary choice between two things the
-artifact says, check first whether the artifact is offering a false choice.
+Both rulings are recorded in full in the ruling log above, including the
+precedent about false binaries that bears on the six Class D items still open.
 
-Files changed in this pass: `SKILL.md` (frontmatter, §C, the master template,
-best practice 6), `README.md` (install), `LICENSE.md` (attribution carve-out),
-and two new files inside the skill directory (`LICENSE.md`, `NOTICE`). Nothing
-in Class D was edited.
+Files changed across this work: `SKILL.md` (frontmatter, §A, §C, the master
+template, best practice 6), `README.md` (install), `LICENSE.md` (attribution
+carve-out), and two new files inside the skill directory (`LICENSE.md`,
+`NOTICE`). Nothing in Class D was edited except where a Murphy ruling closed it
+first.
+
+Commits: `3b474da` (six Class A fixes, register added), `2c831fd` (§A and §C
+rebuilt on Murphy's rulings).
 
 Whether this file ships publicly is an open decision. The argument for shipping
 it: `README.md` is the only one of the five sibling READMEs with no limits
