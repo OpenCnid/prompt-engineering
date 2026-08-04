@@ -748,6 +748,29 @@ tension is Murphy's to resolve, not the skill's.**
 
 ---
 
+## Class E is not blocked, and never was
+
+No ruling gates it. Restoring an item is the compression becoming more faithful,
+so nothing here waits on Murphy or on Cnid. What made it look blocked was volume
+plus the fact that the items are not the same kind of thing. Sorted by whether an
+item changes what a competent agent writes:
+
+- **Roughly two-thirds is novice scaffolding** — the prerequisites checklist, the
+  four "Why Use X?" benefit blocks, the enumeration of legal bullet characters,
+  most `Principle:` restatements. Load-bearing for a reader starting at zero,
+  inert for this skill's reader. **Leave dropped.** Restoring it is what would turn
+  the deployed artifact back into the educational one.
+- **About eight items are genuine judgment** — tag nesting, Tone and Style as
+  output controls, task decomposition, Contextual Introduction, Consistency,
+  Repetition, Weighting, Identify Critical Elements. These turn on what the skill
+  is for, which is the owner's to state.
+- **Three were misfiled.** Pipe alternation, dot-path access, and tag attributes
+  are not compression choices. In each the skill **states a convention and
+  withholds the syntax that makes it usable** — §C defines `(...)` and never shows
+  `(formal|informal)`; §A never mentions attributes while the template ships
+  `type="Structural_Synthesis"`, using a device the skill never introduces. That
+  is an internal defect. **Reclassified to Class A and fixed 2026-08-03.**
+
 ## Class E — source material the compression dropped
 
 New as of the source read. A reader holding only the skill cannot detect any of

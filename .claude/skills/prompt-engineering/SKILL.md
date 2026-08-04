@@ -29,6 +29,8 @@ Wrap distinct information blocks in XML-style tags to prevent context bleeding. 
 - `<output_instructions>`: the target format (JSON / MD / table).
 - `<examples>`: worked examples, labelled so the model can tell an illustration from the request.
 
+Tags take attributes for characteristics of the block — `<output_format format="json">`, `<style tone="formal">` — and nest, where the outer tag is the operation applied to the inner one.
+
 ### B. Hierarchical markers (the skeleton)
 Use explicit outlining to define topological depth.
 - `# Main Topic` / `## Sub-Topic` / `- Structural Detail`.
@@ -41,8 +43,10 @@ The containers — what kind of slot this is:
 - `${...}` user-provided input.
 - `{...}` objects or "libraries" — task components, functions, or conceptual objects representing complex operations.
 - `[...]` list or array.
-- `(...)` option or decision.
+- `(...)` option or decision — enumerate the alternatives inline: `(formal|informal)`, `(basic|detailed|comprehensive)`.
 - `<...></...>` semantic block (section A).
+
+Reach into an object with a dot path: `{productDetails.name}`.
 
 The fill — `...` is the primitive: structure with no content, and it goes inside any container. It is spread and ellipsis at once, because those are the same move — structure applied to the unspecified, the null array that contains every array. That is what the notation above already shows: `${...}` is an input not yet named, `[...]` a list whose members are not yet named.
 
