@@ -12,34 +12,62 @@ authority on a dated ruling, never by inference.*
 > This repository ships the **deployed artifact, not the educational version.**
 > The curriculum is the canonical authority; where the two differ, it wins.
 
-That clause is a standing constraint on every edit, and it is currently
-unfalsifiable from inside the repository: `Lexideck_Prompt_Engineering_Curriculum.v2.md`
-is cited at `SKILL.md:102` and is not tracked here, and the full series is sold
-on Patreon. So today there is no way to tell, from the repository alone, which
-bytes are compression and which are authorship.
+That clause is a standing constraint on every edit. It was unfalsifiable from
+inside the repository until **2026-08-03**, when Matthew Murphy supplied the
+full nine-part curriculum as PDFs and Cnid placed them at `D:\lexideck\`. All
+nine were read in full that day. Provenance is now a settled question rather
+than an open one, and every entry below carries its answer.
 
-That matters in one specific direction. A change that departs from the source
-while the artifact still carries the source's credit is authorship wearing the
-compression's credit — the failure CC BY attribution exists to prevent. Marking
-a departure *as* a departure is what makes it legitimate. This file is the mark.
+The reason this matters runs in one direction only. A change that departs from
+the source while the artifact still carries the source's credit is authorship
+wearing the compression's credit — the failure CC BY attribution exists to
+prevent. Marking a departure *as* a departure is what makes it legitimate. This
+file is the mark.
 
 CC BY 4.0 § 3(a)(1)(B) independently requires a licensee to indicate if changes
 were made. A register satisfies that obligation in a checkable form.
+
+## The curriculum, as read
+
+Murphy's note said Parts 1–3 and 5–8 are full lessons, #4 a preview, #9 a
+review. **The artifacts say otherwise on one point:** Part 3 titles itself
+"Sneak Peek: Powerful Prompting Tools" and teaches no notation, while Part 4 is
+a full lesson pair (Lessons 9–10) plus an appended syntax primer. The preview is
+Part 3.
+
+Part 3's Lesson 8 is an index binding each technique to the part that teaches
+it, and it is the origin of the skill's A–E ordering:
+
+| Skill | Technique | Source |
+|---|---|---|
+| §A | Tags | Part 4 (Lessons 9–10) |
+| §B | Hierarchical Markers / Outlining | Part 5 (Lessons 11–12) |
+| §C | Placeholders / Variables | Part 6 (Lessons 13–14) |
+| §D | Collections | Part 7 (Lessons 15–16) |
+| §E | Attention Management | Part 8 (Lessons 17–18) |
+| — | Golden rules | Part 1 (Lessons 1–3) |
+| — | Organizing complex requests | Part 2 (Lessons 4–6) |
+| — | Combining techniques, best practices | Part 9 (Lessons 19–20) |
+
+Two upstreams sit above these PDFs and are **not** in hand: Parts 4 and 5 both
+credit a file called `Lessons.txt` ("Simplified from `Lessons.txt`"), and Part 6
+cites "Assignment 2." The PDFs are themselves a simplification. Where this
+register says "not in the curriculum," it means *not in these nine PDFs*.
 
 ## How entries are classified
 
 Each entry names the gate it must pass, not how bad it is.
 
-| Class | Meaning | Blocked on the curriculum? |
+| Class | Meaning | Status |
 |---|---|---|
-| **A** | Internal contradiction — the artifact disagrees with itself | No. Fix freely. |
-| **B** | Known house addition, shipped without a mark | No. Mark it. |
-| **C** | Proposed departure — would diverge from the source if adopted | Only to adopt. Marking is the enabling move. |
-| **D** | Provenance unknown — cannot classify until the source is read | Yes. Do not touch. |
+| **A** | Internal contradiction — the artifact disagrees with itself | Closed. |
+| **B** | House addition shipped without a mark — in the skill, not in the source | Open. Mark or remove. |
+| **C** | Proposed departure — would diverge from the source if adopted | Open. Marking is the enabling move. |
+| **D** | Provenance unknown | **Resolved 2026-08-03.** Kept as a record. |
+| **E** | Source material the compression dropped — in the source, not in the skill | Open. Restore or accept. |
 
-Class A is the largest group and none of it is blocked. Class D is the group
-that must not be edited on current-model reasoning, however well-evidenced that
-reasoning is.
+Class E did not exist before the curriculum was read. It is now the largest
+group, and it is the one a reader of the skill alone cannot detect at all.
 
 ## Authorities
 
@@ -106,6 +134,19 @@ framing rather than choosing between the options it offered. Before treating any
 remaining Class D item as a binary between two things the artifact says, check
 whether the artifact is offering a false choice. D3, D5 and D6 all read as
 candidates.
+
+### 2026-08-03 · Murphy and Cnid · the curriculum supplied
+Murphy provided the full nine-part curriculum as PDFs — *"I think this might be
+easier, here's the full curriculum"* — and Cnid placed them at `D:\lexideck\`.
+All nine were read in full the same day, one reader per part, each answering the
+same question manifest against its own document with no visibility of the others.
+
+This closed Class D outright and opened Class E. It also established that the
+skill's own lineage claim is inaccurate for its flagship artifact (B3), and that
+the compression reversed the source's stated position on worked examples (E1).
+
+Both are consequences of provenance being unknowable from inside the repository
+for as long as it was. Neither is a drafting error.
 
 ### Open — awaiting Cnid
 - **Whether to update `hypershot-protocol` to match.** Murphy raised it and
@@ -292,6 +333,139 @@ real argument that the redundancy is load-bearing, since this skill installs and
 ships standalone — a public installer without `hypershot-protocol` would lose the
 practice entirely if it were cut.
 
+### B3 · The master template is house-authored
+`SKILL.md:60-89`
+
+**The single largest finding of the source read.** The template appears in no
+part of the curriculum. Part 9's capstone — the artifact the skill's lineage note
+claims to compress — is a travel-itinerary example:
+
+```
+<request_document type="travel_itinerary">
+  <recipient name="${traveler_name}" age_group="${age_group}"/>
+  ...
+  <output_instructions>
+    <tone>{enthusiasticTone}</tone>
+    <format>
+      ## Daily Plan
+      ### Day [day_number]: [day_theme]
+    </format>
+    <constraints>
+      **IMPORTANT**: Ensure all suggested activities are ${accessibility_requirement}.
+    </constraints>
+  </output_instructions>
+</request_document>
+```
+
+Four structural differences from the skill's template, each independently a
+departure: the source nests `<constraints>` **inside** `<output_instructions>`
+where the skill makes it a sibling; the source has **no `<instruction>` block and
+no numbered imperative steps at all**, its verbs living inside `<constraints>`;
+the source's `<format>` block carries live hierarchical markers, composing §B into
+the template where the skill's flat `Key: ${Value}` lines do not; and the source's
+`type` attribute holds a domain value (D5).
+
+`SKILL.md:102` reads "This skill is the Part 9 capstone compressed into an
+operational protocol." **For the template, that claim is false.** The rest of the
+lineage sentence is accurate. This is the one entry where the credit line itself
+needs amending, not just the register.
+
+### B4 · §B's marker-to-role mapping is house-invented and contradicts Part 5
+`SKILL.md:33`
+
+> Match marker style to the content's natural hierarchy: numbered lists for
+> sequential processes, bullets for parallel items, nested headers for domain
+> decomposition.
+
+Part 5 presents its four marker families as **interchangeable**, chosen for
+consistency, and assigns none of them a semantic role. It says the opposite twice:
+
+> "The key is less about specific syntax (unless an AI system requires it) and
+> more about clearly showing levels."
+
+> "Principle: AI Adaptability: Most modern AIs are good at inferring structure
+> from common outlining conventions."
+
+The skill is prescriptive exactly where the source is deliberately agnostic.
+Independent reviewers rated this the strongest operational line in the toolkit —
+which is the problem: it is good advice wearing the curriculum's authority.
+
+### B5 · §D's "Tables" has no source
+`SKILL.md:47`
+
+The word "table" does not occur anywhere in Part 7. The source's comparison
+vehicle is a numbered list, and it states a preference the skill drops: "For
+typical chat-based prompting, bulleted or numbered lists are more common and
+readable."
+
+### B6 · Three §E lines are invented, and the source's hedges are stripped
+`SKILL.md:51-54`
+
+| Skill | Source |
+|---|---|
+| "If any constraint conflicts, prioritize X over Y." | `"Ensure that you prioritize X over Y."` — one of five interchangeable focus phrasings under `Explicit Phrasing for Importance:`. The conditional and the conflict-resolution framing are house-invented. |
+| "Group related constraints into attention zones so they reinforce each other." | No reinforcement claim exists. The source labels the technique `(Conceptual)`. |
+| "place the most important instructions where the model attends most strongly, the beginning and end of the prompt" | "Information presented at the beginning (primacy) or end (recency) of **a prompt section** can *sometimes* carry more weight. *Consider* placing…" — scoped to a section, doubly hedged. |
+
+### B7 · The compression stripped the source's confidence grading
+Part 8 grades its own techniques in their titles: `(Conceptual)` on attention
+zones, `(Advanced Concept)` on weighting, `(Careful Use)` on repetition, `(Use
+Sparingly)` on ALL CAPS. Part 6 marks `Simple Arrays (Conceptual)`; Part 7 marks
+`Lists of More Complex Items (Objects/Dictionaries - Conceptual)`.
+
+**Every one of these became a flat imperative or was dropped.** This is a
+systematic pattern rather than a slip: the source hedges and the compression
+asserts. Any restoration pass should treat the parentheticals as content.
+
+### B8 · Best practices 1 and 3 have no source
+Topological mapping and Decoherence prevention appear in no part, under those or
+any names, and their vocabulary — "informatic distance," "decoherence," "manifold
+alignment" — appears nowhere in the curriculum. "Structural clarity" *does*
+appear, as Part 5's `Principle: Structural Clarity`, scoped to hierarchical
+markers; the skill promoted a section-level principle to the file's core axiom.
+
+With B1, that makes **three of six best practices house-authored** in a list that
+otherwise carries the curriculum's authority.
+
+### B9 · Additions made in this session, 2026-08-03
+Recorded so they are not later mistaken for compression.
+
+- **`<...></...>` as a fifth placeholder container** (`SKILL.md:§C`). Part 6
+  enumerates exactly four containers, twice, as a closed set, and keeps tags
+  (Part 4) and placeholders (Part 6) explicitly separate. Added on Murphy's
+  ruling that `...` "can go inside `{}`, `()`, `[]`, `<></>`, etc." — which is
+  his to extend, but it is a **new teaching, not a compression**.
+- **`...` as a named primitive** (`SKILL.md:§C`). Part 6 never defines `...`; it
+  appears only as the interior stand-in when naming a notation. Murphy's ruling,
+  same status as above.
+- **"unspecified variable" in the `{...}` gloss** — *an error introduced this
+  session and to be reverted.* Part 6's `{...}` is `Objects or "Libraries": Used
+  for task components, functions, or conceptual objects that represent complex
+  operations`, and all seven source instances are named callables
+  (`{generateSummary}`, `{responseGenerator}`, `{ideaGeneration}`). "Unspecified
+  variable" is close to the inverse. The pre-existing gloss, "objects or
+  function-like components," was correct.
+- **Title_Case_With_Underscores in the template.** Applied under A4 from
+  `hypershot-protocol`'s underscores-as-spaces rule. The curriculum's uniform
+  practice across ~20 examples is snake_case for `${...}` and camelCase for
+  `{...}`. The source never states a rule, so this contradicts nothing — but the
+  two skills now pull different directions on the same token.
+
+### B10 · §A's tag vocabulary partly departs from Part 4
+`SKILL.md:25-28`
+
+Part 4's four **families** are `Input/Context Tags`, `Instruction/Query Tags`,
+`Output Specification Tags`, `Example Tags`. The skill drops the Example family
+entirely and adds `persona` and `data`, which appear nowhere in Part 4.
+`<constraints>` appears in the source only as a nested child inside
+`<search_query>`, never as a top-level family.
+
+On A3's underlying question: **`<task>` is curriculum** (Part 4, Instruction/Query
+family, alongside `<query>` and `<instruction_set>`). Bare `<instruction>` is not.
+Part 9's own trio for what tags label is "context, **query**, output specs."
+Murphy's ruling that the vocabulary is open is confirmed by the source, which
+states it twice and marks every tag list with an italic `Examples:`.
+
 ---
 
 ## Class C — proposed departures
@@ -401,12 +575,136 @@ source first. Listed as the shopping list for whoever obtains the curriculum.
 |---|---|---|
 | ~~D1~~ | ~~the four-tag vocabulary~~ | **Resolved 2026-08-03 by Matthew Murphy.** Neither name is canonical, because the tag name is a categoric primitive and the vocabulary is open. Applied. |
 | ~~D2~~ | ~~the four placeholder types~~ | **Resolved 2026-08-03 by Matthew Murphy.** Not a type taxonomy: containers plus one primitive fill. Rebuild authorized and applied. |
-| D3 | `SKILL.md:51, 76` — `*** CRITICAL ***` | Curriculum device or house styling? Settles whether C1 is a correction or a departure. |
-| D4 | `SKILL.md:70-72` — parse / apply / generate | Verbatim Part 9? Settles C4's fidelity cost. |
-| D5 | `SKILL.md:61` — `type="Structural_Synthesis"` | Canonical entity, or a variant token frozen at the system layer? |
-| D6 | `SKILL.md:72` — "Generate high-fidelity output." | The only unbracketed step, so it copies verbatim into every derived prompt. Curriculum bytes or filler? |
-| D7 | `SKILL.md:96` — the token-dropping mechanism | Does the curriculum state it? Determines whether C2 corrects the compression or the source. |
-| D8 | Best practices 1–5 | Which trace to the curriculum, and to which Part? Everything not traced belongs in Class B. |
+| ~~D3~~ | ~~`*** CRITICAL ***`~~ | **Resolved by the source.** The *device* is Murphy's; the skill's *rendering* is not. See D3 below. |
+| ~~D4~~ | ~~parse / apply / generate~~ | **Resolved by the source. Not curriculum.** Appears in no part. |
+| ~~D5~~ | ~~`type="Structural_Synthesis"`~~ | **Resolved by the source. Not curriculum.** See D5 below. |
+| ~~D6~~ | ~~"Generate high-fidelity output."~~ | **Resolved by the source. Not curriculum.** Appears in no part. |
+| ~~D7~~ | ~~the token-dropping mechanism~~ | **Resolved by the source. Is curriculum** — Part 1, Lesson 1. See D7 below. |
+| ~~D8~~ | ~~best practices 1–5~~ | **Resolved by the source.** Two trace, one partially, two not at all. See D8 below. |
+
+### D3 · The emphasis device is Murphy's; the skill's rendering is not
+Part 8, Lesson 18, `Using "Attention Zones" or Delimiters (Conceptual):` ships a
+**closed zone**:
+
+```
+*** CRITICAL INSTRUCTIONS ***
+- The output must be less than 200 words.
+- The tone must be strictly formal.
+- ONLY MENTION generic product categories.
+****************************
+```
+
+Part 9's capstone uses a different device again: `**IMPORTANT**: Ensure all
+suggested activities are ${accessibility_requirement}.`
+
+The skill's `*** CRITICAL ***` matches neither. Three specific divergences: the
+string is wrong (the source's is `*** CRITICAL INSTRUCTIONS ***`); the zone is
+never closed, which discards the delimiter-pair that is the technique's entire
+point; and the source's zone holds literal prose constraints in mixed case,
+demonstrating selective caps *inside* an already-emphasised zone, which an
+all-placeholder version cannot show. The source also labels the whole technique
+`(Conceptual)` — its own hedge, dropped.
+
+**So C1 splits.** Correcting the string and closing the zone is a *source-faithful
+repair*, available now. Removing the device on current vendor guidance is a
+*departure*, and needs a mark.
+
+### D5 · `type="Structural_Synthesis"` is not curriculum, twice over
+The root-tag-with-`type`-attribute shape does trace — Part 4 has
+`<request_document type="summary">` and `<analyze type="sentiment">`, Part 9 has
+`<request_document type="travel_itinerary">`. But in every source instance the
+`type` value names a **domain or operation of the request**, never a process
+name for the method itself. `Structural_Synthesis` is house vocabulary in a slot
+the source uses for something else.
+
+### D7 · The negation mechanism is Murphy's — and the skill dropped its rationale
+Part 1, Lesson 1:
+
+> "This is critical because of something called "dropped tokens" - where negation
+> words like "don't" or "not" can sometimes be lost during AI processing,
+> completely inverting your meaning!"
+
+> "Positive framing creates fault-tolerant instructions that maintain their core
+> meaning even if some processing degradation occurs."
+
+The first sentence is the skill's claim, so C2 is a **departure from the source**,
+not a repair to the compression. The second sentence — the reason the practice
+generalises beyond the word "don't" — the skill dropped entirely, and it happens
+to survive the 2026 interpretability result intact. See E-neg.
+
+**The curriculum contradicts itself here, and the skill silently adjudicated it.**
+Part 8 teaches `Negative Constraints:` as "a powerful form of attention
+management," with three worked examples in exactly the emphasised-negation form
+Part 1's rule forbids. Part 4 ships `<ingredient_to_avoid>nuts</ingredient_to_avoid>`
+without comment. Part 1 Lesson 2 permits "things to avoid (used sparingly)". The
+skill states positive framing as absolute and drops Part 8's technique. **This
+tension is Murphy's to resolve, not the skill's.**
+
+### D8 · Provenance of best practices 1–5
+| Skill practice | Source | Verdict |
+|---|---|---|
+| 1. Topological mapping | — | **No source in any part.** Class B. |
+| 2. Phase alignment | Part 9 #8 "Mind Your Language and Tone" + #4 audience half | Partial. Name is house; source's mechanism ("The AI often mirrors the tone of your prompt") dropped. |
+| 3. Decoherence prevention | — | **No source in any part.** Nearest is Part 3's "Principle: Enhanced Precision" and Part 4's "Reduced Ambiguity", neither of which is an operation you perform. Class B. |
+| 4. Positive instruction framing | Part 1, Lesson 1 | **Name is verbatim** — "Positive Instruction Framing" is Part 1's own parenthetical. Exemplar "Use plain language accessible to non-specialists" is verbatim. The contrast `beats "Don't use jargon"` is **house-invented**; the source's pairs are "Don't make it boring" → "Make it exciting and engaging." |
+| 5. Iterative refinement | Part 9 #6 | Faithful compression. Source's name is "Iterate, Refine, Experiment! (The Learning Loop)" and its four steps are Prompt / Analyze Output / Refine Prompt / Repeat. The skill drops **Experiment**. |
+
+---
+
+## Class E — source material the compression dropped
+
+New as of the source read. A reader holding only the skill cannot detect any of
+this; it is visible only against the curriculum. Restoring an item costs nothing
+in fidelity terms — it is the compression becoming more faithful, not less.
+
+### E1 · The few-shot inversion — the sharpest divergence in the set
+Three separate parts teach worked examples as a recommended practice:
+
+- **Part 1, Lesson 3** is titled "Show, Don't Just Tell (Use Examples)", with
+  `Principle: Example-Driven Instruction (Few-Shot Learning)` and
+  `Principle: Clarity of Demonstration`.
+- **Part 4** names `Example Tags` as one of four tag families:
+  "If providing examples to the AI (few-shot prompting), wrap them in tags,"
+  with `<example_input>` / `<example_output>`.
+- **Part 9**, best practice 5: "Use Examples (Few-Shot Prompting): If you want a
+  very specific style or format, providing 1-3 examples of the desired output can
+  be incredibly effective."
+
+The skill carries **no few-shot guidance at all** and routes the subject to
+`hypershot-protocol`, whose founding premise is that concrete examples contaminate
+and must be replaced by free-variable frames. That is a coherent position and may
+well be the better one for an agent-facing artifact — but it is a **reversal of
+the credited source's explicit, thrice-stated recommendation**, and nothing in
+either repository marks it as one. Of everything in this register, this is the
+item where an unmarked departure most misrepresents the author.
+
+### E2 · The rationale that outlives the mechanism
+Part 1, Lesson 1: "Positive framing creates fault-tolerant instructions that
+maintain their core meaning even if some processing degradation occurs."
+
+Dropped by the skill. It is the reason the practice generalises past the word
+"don't" — and unlike the dropped-tokens mechanism (D7), it is untouched by the
+2026 interpretability result. **Restoring it is the cheapest available answer to
+C2**: it strengthens the practice, requires no departure, and is Murphy's own
+sentence.
+
+### E3 · Everything else, by part
+
+| Part | Dropped |
+|---|---|
+| 1 | `Principle: Assign a Role` and `Principle: Specify the Audience` as practices (the skill has only template slots); the Prerequisites Checklist and its Basic/Intermediate tiering |
+| 2 | **Task decomposition — an entire lesson** (Lesson 4) with no trace in the skill, including the sequential-vs-combined choice; `Tone:` and `Style:` as output controls (the source's Lesson 6 teaches four — Tone, Style, Format, Length — the skill ships Format, Audience, Length); the escalation ladder, "This is a precursor to more formal methods like hierarchical markers" |
+| 4 | **Tag attributes and the mini-BNF** — `<tagName [ attributeName="value" ]*> content </tagName>`, given twice identically, the part's clearest signal of its own takeaway, carried by the skill in no form even though its template uses an attribute; **tag nesting with directional semantics** ("the outer `<analyze>` tag tells the AI to analyze sentiment *after* translation"); closing-tag hygiene; the scoping caveat "you don't need them for every simple question" |
+| 5 | `Principle: Consistency is Key`, stated three times; the source's third Markdown level (`### Detail`, which the skill silently converted to `- Structural Detail`); `Identify Levels of Information` as a pre-writing step |
+| 6 | **Pipe alternation** — `(formal\|informal)`, `(basic\|detailed\|comprehensive)` — the only concrete syntax `(...)` has, shown five times, absent from the skill, so a reader cannot write one; **dot-path access**, `{productDetails.name}`; `Principle: Nested Complexity`; the fill-time contract including the branch where the AI is left to request missing values; `Choose Clear Placeholder Names` as a method step |
+| 7 | `Principle: Contextual Introduction` — state what a list represents before presenting it; the list-format preference for chat; the whole `Why Use Collections?` rationale block |
+| 8 | `Repetition (Careful Use)`; `Weighting (Advanced Concept)`; italics as a distinct device; the five-item explicit-phrasing menu; `Identify Critical Elements` — the audit step that precedes any marking |
+| 9 | `Principle: Synergy` and `Principle: Modularity` — Lesson 19's entire thesis, that the techniques compose; `Principle: Iterative Construction` (iterating on structure while building, distinct from iterating on output); `Provide Sufficient Context` and `Principle: Context is King`; `Quickly Review the Output`; `Consistency Can Be Key`, which is the source's own justification for having a master template at all; the closing instruction to experiment |
+
+**On C6.** The proposed "stopping rule for structure" is not a departure at all —
+Part 2's precursor framing and Part 4's "you don't need them for every simple
+question" are the source's own version of it. C6 reclassifies to **Class E:
+restoration**.
 
 ---
 
@@ -466,9 +764,22 @@ can be checked against them mechanically.
 ## Status
 
 **Class A: closed.** Six fixed on internal evidence; A2 and A3 resolved by
-Matthew Murphy on 2026-08-03 and applied — his ruling also closed D1 and D2,
-since both turned on the same two questions. Classes B and C are untouched.
-Class D retains six open items.
+Matthew Murphy and applied. **Class D: closed** — D1 and D2 by Murphy's rulings,
+D3–D8 by the source read of 2026-08-03.
+
+**Open: Class B (10), Class C (6, several reclassified), Class E (the largest).**
+Three items warrant naming as the ones that change what the artifact claims about
+itself rather than what it says:
+
+- **B3** — the master template is house-authored, so `SKILL.md:102`'s "the Part 9
+  capstone compressed" is false for the skill's flagship artifact. The credit line
+  needs amending, not only the register.
+- **E1** — the compression reversed the source's thrice-stated recommendation to
+  use worked examples. Defensible as a position; unmarked as it stands.
+- **B8 with B1** — three of six best practices have no source, in a numbered list
+  that otherwise carries the curriculum's authority.
+
+Nothing in Classes B, C or E has been acted on.
 
 Both rulings are recorded in full in the ruling log above, including the
 precedent about false binaries that bears on the six Class D items still open.
