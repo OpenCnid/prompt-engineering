@@ -22,9 +22,9 @@ You are shaping how a model generates — a prompt, template, agent instruction,
 ## The toolkit
 
 ### A. Semantic tagging (the container)
-Wrap distinct information blocks in XML-style tags to prevent context bleeding.
+Wrap distinct information blocks in XML-style tags to prevent context bleeding. The tag name is a **categoric primitive**: name the category the block *is*. The vocabulary is open — task, instruction, context, data, persona, examples, whatever the block actually holds — so name what fits instead of forcing a block into a borrowed tag. Common instances:
 - `<context>`: environmental or historical state.
-- `<task>`: the core objective.
+- `<task>` or `<instruction>`: the core objective.
 - `<constraints>`: the non-negotiable logic bounds.
 - `<output_instructions>`: the target format (JSON / MD / table).
 
@@ -34,13 +34,18 @@ Use explicit outlining to define topological depth.
 - Match marker style to the content's natural hierarchy: numbered lists for sequential processes, bullets for parallel items, nested headers for domain decomposition.
 
 ### C. Structured placeholders (the manifest)
-Use placeholders to build reusable, parameterized prompts. Four types:
-- `${...}` for user-provided inputs.
-- `{...}` for objects or function-like components.
-- `[...]` for lists or arrays.
-- `(...)` for options or decisions.
+A placeholder is a **container** holding a **fill**. Two decisions, not one taxonomy.
 
-Name every slot with underscores-as-spaces — `${Target_Format}`, never `[Target format]` — so the name stays parseable as a single token-position. The master template below is the worked instance of this section: where a slot's type is ever unclear, the template is what the taxonomy means.
+The containers — what kind of slot this is:
+- `${...}` user-provided input.
+- `{...}` object, component, or unspecified variable.
+- `[...]` list or array.
+- `(...)` option or decision.
+- `<...></...>` semantic block (section A).
+
+The fill — `...` is the primitive: structure with no content, and it goes inside any container. It is spread and ellipsis at once, because those are the same move — structure applied to the unspecified, the null array that contains every array. That is what the notation above already shows: `${...}` is an input not yet named, `[...]` a list whose members are not yet named.
+
+Load a fill by replacing `...` with a name, as far as the surrounding structure needs and no further: `{...}` → `{Methodology}` → `{Methodology_Named_As_Its_Procedure}`. Underscores-as-spaces keep a full phrase parseable as one token-position. A frame that already shapes a slot wants the bare primitive; leave it empty.
 
 ### D. Collections (the data layer)
 When presenting multiple data points to a model, structure them as collections:

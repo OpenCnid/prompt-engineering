@@ -45,8 +45,8 @@ reasoning is.
 | # | Disposition |
 |---|---|
 | A1 | **Fixed.** Template slots retyped to §C's own definitions; §C anchored to the template as its worked instance. |
-| A2 | **Referred to Matthew Murphy.** Whether the taxonomy should carry four types, and whether `(...)` earns a place, is a curriculum question. Untouched. |
-| A3 | **Referred to Matthew Murphy.** `<task>` vs `<instruction>` may be curriculum vocabulary either way. Untouched — the file still names both. |
+| A2 | **Fixed on Murphy's ruling.** `...` is the *primitive*, not a fifth type — spread and ellipsis are the same move, structure applied to the unspecified. It goes inside any container. §C rebuilt as containers × fill; the four brackets were never parallel types, and `${...}` / `(...)` were never unexercised — they are containers shown holding the primitive. |
+| A3 | **Dissolved on Murphy's ruling** — "the question is malformed." A tag name is a *categoric primitive*; the vocabulary is open, and both names are valid instances of it. §A now states this and names both. The defect was never the mismatch — it was §A presenting four tags as a closed set. |
 | A4 | **Fixed.** Underscores-as-spaces throughout the template; the rule is now stated in §C. |
 | A5 | **Fixed.** House-internal pointers removed; replaced with the self-contained sentence. |
 | A6 | **Fixed and verified.** `mkdir -p`, a PowerShell variant, a `CLAUDE_CONFIG_DIR` note, and the silent-failure warning. Re-tested in the previously-broken state and on the upgrade path. |
@@ -323,8 +323,8 @@ source first. Listed as the shopping list for whoever obtains the curriculum.
 
 | # | Bytes | Question to answer against the source |
 |---|---|---|
-| D1 | `SKILL.md:25-28` — the four-tag vocabulary | Is `<task>` curriculum vocabulary, or is `<instruction>`? Settles A3's direction. |
-| D2 | `SKILL.md:36-40` — the four placeholder types | Is the type-sorted taxonomy verbatim curriculum? Settles whether A1 is repaired by fixing the template or by rebasing §C. |
+| ~~D1~~ | ~~the four-tag vocabulary~~ | **Resolved 2026-08-03 by Matthew Murphy.** Neither name is canonical, because the tag name is a categoric primitive and the vocabulary is open. Applied. |
+| ~~D2~~ | ~~the four placeholder types~~ | **Resolved 2026-08-03 by Matthew Murphy.** Not a type taxonomy: containers plus one primitive fill. Rebuild authorized and applied. |
 | D3 | `SKILL.md:51, 76` — `*** CRITICAL ***` | Curriculum device or house styling? Settles whether C1 is a correction or a departure. |
 | D4 | `SKILL.md:70-72` — parse / apply / generate | Verbatim Part 9? Settles C4's fidelity cost. |
 | D5 | `SKILL.md:61` — `type="Structural_Synthesis"` | Canonical entity, or a variant token frozen at the system layer? |
@@ -389,8 +389,17 @@ can be checked against them mechanically.
 
 ## Status
 
-**Class A: six fixed, two referred to Matthew Murphy** (see the disposition
-table above). Classes B, C, and D are untouched and remain as recorded.
+**Class A: closed.** Six fixed on internal evidence; A2 and A3 resolved by
+Matthew Murphy on 2026-08-03 and applied — his ruling also closed D1 and D2,
+since both turned on the same two questions. Classes B and C are untouched.
+Class D retains six open items.
+
+Murphy's ruling is the precedent worth carrying forward: both questions were
+answered by rejecting their framing rather than by choosing a side. `...` is a
+primitive that goes inside containers, not a fifth container; a tag name is a
+categoric primitive drawn from an open vocabulary, not an entry in a closed set
+of four. Where a Class D item looks like a binary choice between two things the
+artifact says, check first whether the artifact is offering a false choice.
 
 Files changed in this pass: `SKILL.md` (frontmatter, §C, the master template,
 best practice 6), `README.md` (install), `LICENSE.md` (attribution carve-out),
