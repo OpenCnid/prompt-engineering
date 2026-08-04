@@ -27,6 +27,7 @@ Wrap distinct information blocks in XML-style tags to prevent context bleeding. 
 - `<task>` or `<instruction>`: the core objective.
 - `<constraints>`: the non-negotiable logic bounds.
 - `<output_instructions>`: the target format (JSON / MD / table).
+- `<examples>`: worked examples, labelled so the model can tell an illustration from the request.
 
 ### B. Hierarchical markers (the skeleton)
 Use explicit outlining to define topological depth.
@@ -38,7 +39,7 @@ A placeholder is a **container** holding a **fill**. Two decisions, not one taxo
 
 The containers — what kind of slot this is:
 - `${...}` user-provided input.
-- `{...}` object, component, or unspecified variable.
+- `{...}` objects or "libraries" — task components, functions, or conceptual objects representing complex operations.
 - `[...]` list or array.
 - `(...)` option or decision.
 - `<...></...>` semantic block (section A).
@@ -56,14 +57,14 @@ When presenting multiple data points to a model, structure them as collections:
 
 ### E. Attention management (the priority signal)
 Direct the model's attention to what matters most.
-- Use formatting (bold, caps, markers like `*** CRITICAL ***`) for emphasis.
+- Use formatting for emphasis: bold, italics, caps sparingly, or a delimited attention zone. A zone is a matched pair — open it and close it, so the boundary is unmistakable.
 - Order strategically: place the most important instructions where the model attends most strongly, the beginning and end of the prompt.
 - Group related constraints into attention zones so they reinforce each other.
 - Prioritize explicitly: "If any constraint conflicts, prioritize X over Y."
 
 ## The master template (a hypershot)
 
-This template is itself a hypershot: a structural frame with free variables, not filled-in examples. See the hypershot-protocol skill for the full technique.
+This template is itself a hypershot: a structural frame with free variables rather than filled-in ones. A hypershot is still a worked example — it carries a *form* rather than a specific shape, so it primes structure without priming content. The two are the same practice at different altitudes: show a filled example when the specific shape is what should be copied, and a frame when the shape should vary. See the hypershot-protocol skill for the full technique.
 
 ```xml
 <request type="Structural_Synthesis">
@@ -81,10 +82,11 @@ This template is itself a hypershot: a structural frame with free variables, not
   </instruction>
 
   <constraints>
-    *** CRITICAL ***
+    *** CRITICAL INSTRUCTIONS ***
     - ${Non_Negotiable_Constraint_1}
     - ${Non_Negotiable_Constraint_2}
     - ${Format_Or_Style_Requirement}
+    ****************************
   </constraints>
 
   <output_instructions>
@@ -101,10 +103,12 @@ This template is itself a hypershot: a structural frame with free variables, not
 1. **Topological mapping.** Map the informatic distance between the prompt's starting state and the desired output before you generate — understand the shape of the problem before proposing a shape for the solution.
 2. **Phase alignment.** Match tone, register, and technical depth to the context. A prompt for a 12-year-old and a prompt for a domain expert should differ in more than vocabulary.
 3. **Decoherence prevention.** Turn ambiguity into stable, unambiguous instruction. Every vague term is a fork where the model guesses instead of follows.
-4. **Positive instruction framing.** Tell the model what TO DO, not what to avoid. "Use plain language accessible to non-specialists" beats "Don't use jargon"; negation tokens can be dropped during processing, inverting meaning.
+4. **Positive instruction framing.** Tell the model what TO DO, not what to avoid. "Make it exciting and engaging" beats "Don't make it boring"; negation words like "don't" or "not" can be lost during processing, inverting your meaning. Positive framing creates fault-tolerant instructions that maintain their core meaning even if some processing degradation occurs. Where a prohibition genuinely is the constraint, state it sparingly and give it emphasis.
 5. **Iterative refinement (the learning loop).** Treat every prompt as a draft. Evaluate the output, find where the model diverged from intent, tighten the prompt at the point of divergence, and repeat.
 6. **Uncontaminated context.** A prompt for another agent carries exactly what that agent cannot derive cold and needs in order to look. What you expect it to find is content placed where it will be attended to, so the agent hands it back and no report separates that from a finding — most of all when the expectation is true; the probe that produced it carries the same content in method's clothes. One question sorts them: *does this let the agent look, or does it tell the agent what looking will turn up?* A held expectation has one destination and it is not a prompt: put it to the collaborator.
 
 ## Lineage
 
-Derived from the Lexideck Prompt Engineering Curriculum, "Talking to AIs Effectively," a nine-part series by Matthew Murphy (Part 1 golden rules through Part 9 best practices; covering tags, hierarchical markers, placeholders, collections, and attention management). This skill is the Part 9 capstone compressed into an operational protocol; it is the deployed artifact, not the educational version. Full curriculum on Patreon (patreon.com/c/LexideckTechnologies); source doc `Lexideck_Prompt_Engineering_Curriculum.v2.md`.
+Derived from the Lexideck Prompt Engineering Curriculum, "Talking to AIs Effectively," a nine-part series by Matthew Murphy. Sections A–E compress Parts 4–8, one to one and in the order Part 3 sets out. Best practices 4 and 5 come from Parts 1 and 9. Practices 1 and 3 come from Murphy's WonderSuite prompts rather than from this curriculum; practice 6 and the master template are OpenCnid's, written in the curriculum's idiom rather than compressed from it.
+
+The curriculum carries a novice to an intermediate level and remains the canonical authority; this skill is the deployed artifact, addressed to a reader who is already past that. Departures, omissions, and their rulings are recorded in `DEVIATIONS.md`. Full curriculum on Patreon (patreon.com/c/LexideckTechnologies).

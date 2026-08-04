@@ -148,7 +148,62 @@ the compression reversed the source's stated position on worked examples (E1).
 Both are consequences of provenance being unknowable from inside the repository
 for as long as it was. Neither is a drafting error.
 
+### 2026-08-03 · Murphy · rulings on the source read
+Six rulings, given in response to the findings above. Four authorised repairs,
+which are applied; two dissolved findings by supplying provenance the register
+did not have.
+
+**B3 — the credit line.** *"True."* `SKILL.md`'s lineage no longer claims to
+compress the Part 9 capstone. It now states which parts each section compresses,
+and which material is not curriculum at all.
+
+**C1 — the emphasis device.** *"Let's fix it."* Applied as the source-faithful
+repair: `*** CRITICAL INSTRUCTIONS ***` with the zone closed by an asterisk rule,
+and §E now teaches a zone as a matched pair. Italics restored as a named device.
+
+**C2 — positive framing.** *"Let's remediate the skill."* Murphy's fault-tolerance
+sentence is restored verbatim, the invented `"Don't use jargon"` contrast is
+replaced with the source's own pair, and the sparing-prohibition carve-out is
+restored — which is also how the curriculum itself reconciles Part 1's rule with
+Part 8's negative constraints.
+
+**B8 — practices 1 and 3 have a source after all.** *"Two of them are from the
+owner's clone of my WonderSuite prompts, which work based on topological
+primitives, where the worked examples* are *hypershots."* Topological mapping and
+decoherence prevention are Murphy's, by a different line of descent than the
+nine-part curriculum. **They are not house inventions and the register was wrong
+to imply it.** Practice 6 remains OpenCnid's (B1).
+
+**E1 — not a reversal.** *"The prompt engineering lessons bring novices to
+intermediate level… Hypershots are an advanced abstraction technique that relies
+on at least some understanding of a model's internal representations and its role
+as a rough-fuzzy classifier. Not novice level. However, Claude is not a novice
+prompt engineer either."* And decisively: *"hypershots* are *worked examples. They
+just take a form, rather than a specific shape."*
+
+So the curriculum and the companion skill are the same practice at two altitudes,
+not opposed positions. The skill now says this where the template is introduced,
+and gives the selection rule: a filled example when the specific shape should be
+copied, a frame when the shape should vary. `<examples>` is restored to §A as the
+tag family Part 4 names.
+
+**The upstream question is closed.** *"Lessons.txt became Lessons.md became the
+PDFs via a tool I built. The source is byte-identical to the PDFs."* There is no
+further upstream to consult; the nine PDFs are the source of record. The
+"Assignment 2" reference in Part 6 remains unexplained but no longer implies
+missing prose.
+
 ### Open — awaiting Cnid
+- **The WonderPrompt document is not on this machine.** Murphy pointed to it —
+  *"See also: the WonderPrompt document in axes of wonder repo… It moves into
+  topological prompting and decoherence prevention while itself teaching the
+  essence of hypershots"* — as the source for practices 1 and 3. `D:\wonderprompt`
+  is an unrelated skill-authoring research repo, and no "axes of wonder"
+  directory exists locally. **Practices 1 and 3 are therefore credited to
+  WonderSuite in the lineage but not yet checked against it**, and nothing new
+  has been written about topological primitives. Reading that document is the
+  next thing that would move the register; writing toward it without reading it
+  would be exactly the overfit Murphy cautioned against.
 - **Whether to update `hypershot-protocol` to match.** Murphy raised it and
   conditioned it on the owner: *"If necessary, and with the owner's permission,
   you can update your hypershot skill, too."* The change would be small — that
@@ -417,15 +472,21 @@ Sparingly)` on ALL CAPS. Part 6 marks `Simple Arrays (Conceptual)`; Part 7 marks
 systematic pattern rather than a slip: the source hedges and the compression
 asserts. Any restoration pass should treat the parentheticals as content.
 
-### B8 · Best practices 1 and 3 have no source
-Topological mapping and Decoherence prevention appear in no part, under those or
-any names, and their vocabulary — "informatic distance," "decoherence," "manifold
-alignment" — appears nowhere in the curriculum. "Structural clarity" *does*
-appear, as Part 5's `Principle: Structural Clarity`, scoped to hierarchical
-markers; the skill promoted a section-level principle to the file's core axiom.
+### B8 · Best practices 1 and 3 — *superseded 2026-08-03*
+~~Topological mapping and Decoherence prevention have no source.~~ **Withdrawn.**
+Murphy: they descend from his **WonderSuite** prompts, via the owner's clone —
+a different line of descent from the nine-part curriculum, not an absence of one.
+The lineage now credits them accordingly. Depth remains unverified pending the
+WonderPrompt document (see *Open*).
 
-With B1, that makes **three of six best practices house-authored** in a list that
-otherwise carries the curriculum's authority.
+What survives from the original finding, and is still worth a mark: the
+curriculum's vocabulary — "informatic distance," "decoherence," "manifold
+alignment" — appears in none of the nine parts, so a reader who checks the skill
+against the PDFs alone will not find it. "Structural clarity" *does* appear, as
+Part 5's `Principle: Structural Clarity`, scoped to hierarchical markers; the
+skill promoted a section-level principle to the file's core axiom.
+
+With B1, **one of six best practices is OpenCnid's** — practice 6 — not three.
 
 ### B9 · Additions made in this session, 2026-08-03
 Recorded so they are not later mistaken for compression.
@@ -657,7 +718,21 @@ New as of the source read. A reader holding only the skill cannot detect any of
 this; it is visible only against the curriculum. Restoring an item costs nothing
 in fidelity terms — it is the compression becoming more faithful, not less.
 
-### E1 · The few-shot inversion — the sharpest divergence in the set
+### E1 · ~~The few-shot inversion~~ — *dissolved 2026-08-03 by Murphy*
+
+**Not a reversal. An altitude difference.** Murphy: *"hypershots* are *worked
+examples. They just take a form, rather than a specific shape."* The curriculum
+carries a novice to intermediate; hypershots are the advanced form of the same
+practice, and the skill's reader is not a novice. The skill now states the
+relationship and the selection rule where the template is introduced, and
+`<examples>` is restored to §A.
+
+The finding is kept below because the *evidence* still stands and the omission
+was real — what was wrong was reading it as opposition.
+
+---
+
+**Original finding, superseded:**
 Three separate parts teach worked examples as a recommended practice:
 
 - **Part 1, Lesson 3** is titled "Show, Don't Just Tell (Use Examples)", with
@@ -767,19 +842,21 @@ can be checked against them mechanically.
 Matthew Murphy and applied. **Class D: closed** — D1 and D2 by Murphy's rulings,
 D3–D8 by the source read of 2026-08-03.
 
-**Open: Class B (10), Class C (6, several reclassified), Class E (the largest).**
-Three items warrant naming as the ones that change what the artifact claims about
-itself rather than what it says:
+**Closed by Murphy's rulings of 2026-08-03 and applied:** B3 (lineage rewritten),
+C1 (emphasis zone repaired), C2 (fault-tolerance sentence restored, source's own
+contrast pair, sparing-prohibition carve-out), E1 (dissolved — altitude, not
+opposition), B9's `{...}` error (reverted), and the `Lessons.txt` upstream
+question (there is no further upstream). B8 is withdrawn: practices 1 and 3
+descend from WonderSuite.
 
-- **B3** — the master template is house-authored, so `SKILL.md:102`'s "the Part 9
-  capstone compressed" is false for the skill's flagship artifact. The credit line
-  needs amending, not only the register.
-- **E1** — the compression reversed the source's thrice-stated recommendation to
-  use worked examples. Defensible as a position; unmarked as it stands.
-- **B8 with B1** — three of six best practices have no source, in a numbered list
-  that otherwise carries the curriculum's authority.
+**Still open:** the rest of Class B, Class C's remaining items, and Class E, which
+is the largest group and entirely untouched. The register's own error rate is now
+part of the record — two findings were overturned by provenance the register did
+not have, both in the direction of accusing the compression of invention where
+there was descent.
 
-Nothing in Classes B, C or E has been acted on.
+**The next thing that would move this** is the WonderPrompt document, which is not
+on this machine.
 
 Both rulings are recorded in full in the ruling log above, including the
 precedent about false binaries that bears on the six Class D items still open.
