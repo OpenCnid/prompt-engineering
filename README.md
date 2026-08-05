@@ -1,5 +1,25 @@
 # prompt-engineering
 
+> [!IMPORTANT]
+> **This repository has moved into [OpenCnid/dovetail](https://github.com/OpenCnid/dovetail).**
+>
+> `prompt-engineering` is now one of nine skills in that pack, at
+> [`skills/prompt-engineering/`](https://github.com/OpenCnid/dovetail/tree/main/skills/prompt-engineering).
+> Install the whole pack with a plain clone — there are no submodules:
+>
+> ```bash
+> git clone https://github.com/OpenCnid/dovetail.git
+> cd dovetail && bash scripts/install.sh
+> ```
+>
+> The eight skills were separate repositories while each was developed on its
+> own. They are used together, so they are now maintained together; keeping them
+> apart cost a pin-bumping step before every change and bought nothing a reader
+> could see. This repository is archived and read-only. Its history is the record
+> of how this skill got here, and `docs/provenance.md` in dovetail names the
+> commit its content arrived at.
+
+
 *Structural clarity and manifold alignment over "magic words."*
 
 [![license](https://img.shields.io/badge/license-CC_BY_4.0-3b7ddd)](LICENSE.md)
