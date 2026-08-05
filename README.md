@@ -53,7 +53,7 @@ collaborator.
 ```bash
 git clone https://github.com/OpenCnid/prompt-engineering.git
 mkdir -p ~/.claude/skills
-cp -r prompt-engineering/.claude/skills/prompt-engineering ~/.claude/skills/
+cp -r prompt-engineering/skills/prompt-engineering ~/.claude/skills/
 ```
 
 **Do not skip the `mkdir`.** If `~/.claude/skills/` does not already exist, `cp`
@@ -66,7 +66,7 @@ PowerShell:
 ```powershell
 git clone https://github.com/OpenCnid/prompt-engineering.git
 New-Item -ItemType Directory -Force ~/.claude/skills
-Copy-Item -Recurse -Force prompt-engineering/.claude/skills/prompt-engineering ~/.claude/skills/
+Copy-Item -Recurse -Force prompt-engineering/skills/prompt-engineering ~/.claude/skills/
 ```
 
 `-Force` matters on the second run — without it, an upgrade fails with *an item
