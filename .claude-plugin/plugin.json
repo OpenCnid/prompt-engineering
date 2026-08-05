@@ -1,0 +1,12 @@
+{
+  "name": "prompt-engineering",
+  "description": "The Lexideck prompt-engineering protocol: structural clarity and manifold alignment over \"magic words\" — semantic tagging, hierarchical markers, structured placeholders, collections, and attention management, plus the best-practice loop.",
+  "version": "0.1.0",
+  "author": {
+    "name": "OpenCnid Labs",
+    "url": "https://github.com/OpenCnid"
+  },
+  "homepage": "https://github.com/OpenCnid/prompt-engineering",
+  "repository": "https://github.com/OpenCnid/prompt-engineering",
+  "license": "CC-BY-4.0"
+}
