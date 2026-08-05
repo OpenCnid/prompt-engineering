@@ -52,8 +52,27 @@ collaborator.
 
 ```bash
 git clone https://github.com/OpenCnid/prompt-engineering.git
+mkdir -p ~/.claude/skills
 cp -r prompt-engineering/.claude/skills/prompt-engineering ~/.claude/skills/
 ```
+
+**Do not skip the `mkdir`.** If `~/.claude/skills/` does not already exist, `cp`
+reads the trailing path as a *rename target*: you get `~/.claude/skills/SKILL.md`
+with no skill directory, exit code 0, and no error. The skill never loads and
+nothing tells you why.
+
+PowerShell:
+
+```powershell
+git clone https://github.com/OpenCnid/prompt-engineering.git
+New-Item -ItemType Directory -Force ~/.claude/skills
+Copy-Item -Recurse -Force prompt-engineering/.claude/skills/prompt-engineering ~/.claude/skills/
+```
+
+`-Force` matters on the second run — without it, an upgrade fails with *an item
+with the specified name already exists*.
+
+If you have set `CLAUDE_CONFIG_DIR`, that is your skills root, not `~/.claude`.
 
 Or install it with the rest of the stack:
 [OpenCnid/dovetail](https://github.com/OpenCnid/dovetail).
