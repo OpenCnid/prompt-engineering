@@ -17,8 +17,6 @@ license: CC-BY-4.0
 
 > Core axiom: effective prompting is not about "magic words" but about **structural clarity** and **manifold alignment**.
 
-You are shaping how a model generates — a prompt, template, agent instruction, or output schema. The toolkit is the *how*; the best practices keep it honest.
-
 ## The toolkit
 
 ### A. Semantic tagging (the container)
@@ -48,19 +46,18 @@ The containers — what kind of slot this is:
 
 Reach into an object with a dot path: `{productDetails.name}`.
 
-The fill — `...` is the primitive: structure with no content, and it goes inside any container. It is spread and ellipsis at once, because those are the same move — structure applied to the unspecified, the null array that contains every array. That is what the notation above already shows: `${...}` is an input not yet named, `[...]` a list whose members are not yet named.
+The fill — `...` is the primitive: structure with no content, and it goes inside any container. It is spread and ellipsis at once, because those are the same move — structure applied to the unspecified, the null array that contains every array.
 
-Load a fill by replacing `...` with a name, as far as the surrounding structure needs and no further: `{...}` → `{Methodology}` → `{Methodology_Named_As_Its_Procedure}`. Underscores-as-spaces keep a full phrase parseable as one token-position. A frame that already shapes a slot wants the bare primitive; leave it empty.
+Load a fill by replacing `...` with a name, as far as the surrounding structure needs and no further: `{...}` → `{Methodology}` → `{Methodology_Named_As_Its_Procedure}`. Underscores-as-spaces keep a full phrase parseable as one token-position.
 
 ### D. Collections (the data layer)
-When presenting multiple data points to a model, structure them as collections:
+Structure multiple data points as collections:
 - Simple lists for enumeration.
 - Key-value pairs for attribute sets.
 - Nested objects for multi-property items.
 - Tables for comparison and batch processing.
 
 ### E. Attention management (the priority signal)
-Direct the model's attention to what matters most.
 - Use formatting for emphasis: bold, italics, caps sparingly, or a delimited attention zone. A zone is a matched pair — open it and close it, so the boundary is unmistakable.
 - Order strategically: place the most important instructions where the model attends most strongly, the beginning and end of the prompt.
 - Group related constraints into attention zones so they reinforce each other.
@@ -68,7 +65,7 @@ Direct the model's attention to what matters most.
 
 ## The master template (a hypershot)
 
-This template is itself a hypershot: a structural frame with free variables rather than filled-in ones. A hypershot is still a worked example — it carries a *form* rather than a specific shape, so it primes structure without priming content. The two are the same practice at different altitudes: show a filled example when the specific shape is what should be copied, and a frame when the shape should vary. See the hypershot-protocol skill for the full technique.
+A hypershot is a structural frame with free variables rather than filled-in ones — still a worked example, carrying a *form* rather than a specific shape, so it primes structure without priming content. Same practice, two altitudes: a filled example when the specific shape should be copied, a frame when it should vary. Full technique: the hypershot-protocol skill.
 
 ```xml
 <request type="Structural_Synthesis">
@@ -104,12 +101,12 @@ This template is itself a hypershot: a structural frame with free variables rath
 
 ## Best practices
 
-1. **Topological mapping.** Map the informatic distance between the prompt's starting state and the desired output before you generate. Locate the work on the axes that will shape it — how much structure it needs, what it must do, how much of the reasoning it should carry, how bounded its context is, what kind of knowledge it rests on — and let those positions decide the prompt's form. Understand the shape of the problem before proposing a shape for the solution.
-2. **Phase alignment.** Match tone, register, and technical depth to the context. A prompt for a 12-year-old and a prompt for a domain expert should differ in more than vocabulary.
+1. **Topological mapping.** Map the informatic distance between the prompt's starting state and the desired output before you generate. Locate the work on the axes that will shape it — how much structure it needs, what it must do, how much of the reasoning it should carry, how bounded its context is, what kind of knowledge it rests on — and let those positions decide the prompt's form.
+2. **Phase alignment.** Match tone, register, and technical depth to the context.
 3. **Decoherence prevention.** Turn ambiguity into stable, unambiguous instruction. Every vague term is a fork where the model guesses instead of follows.
 4. **Positive instruction framing.** Tell the model what TO DO, not what to avoid. "Make it exciting and engaging" beats "Don't make it boring"; negation words like "don't" or "not" can be lost during processing, inverting your meaning. Positive framing creates fault-tolerant instructions that maintain their core meaning even if some processing degradation occurs. Where a prohibition genuinely is the constraint, state it sparingly and give it emphasis.
-5. **Iterative refinement (the learning loop).** Treat every prompt as a draft. Evaluate the output, find where the model diverged from intent, tighten the prompt at the point of divergence, and repeat.
-6. **Uncontaminated context.** A prompt for another agent carries exactly what that agent cannot derive cold and needs in order to look. What you expect it to find is content placed where it will be attended to, so the agent hands it back and no report separates that from a finding — most of all when the expectation is true; the probe that produced it carries the same content in method's clothes. One question sorts them: *does this let the agent look, or does it tell the agent what looking will turn up?* A held expectation has one destination and it is not a prompt: put it to the collaborator.
+5. **Iterative refinement (the learning loop).** Evaluate the output, find where the model diverged from intent, tighten the prompt at the point of divergence, and repeat.
+6. **Uncontaminated context.** A prompt for another agent carries exactly what that agent cannot derive cold and needs in order to look — provenance, addresses, what counts as evidence here. That is its *ground*, and it is the whole of what a ground block may carry. What you expect it to find is not ground: it is content placed where it will be attended to, so the agent hands it back and no report separates a returned expectation from a finding — most of all when the expectation is true. The probe that produced the expectation falls on the same side: handing over the method hands over the finding with one step of deniability attached. One question sorts them: *does this let the agent look, or does it tell the agent what looking will turn up?* An expectation has no layer in the prompt at all, so it has one destination and it is not a prompt: end the turn and put it to the collaborator — before reaching for any lever that installs standing configuration, because settling an ambiguity by configuring answers your own question with your own guess and keeps that answer for every later turn.
 
 ## Lineage
 

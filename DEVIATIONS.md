@@ -194,7 +194,7 @@ further upstream to consult; the nine PDFs are the source of record. The
 missing prose.
 
 ### 2026-08-03 · WonderPrompt read — practices 1 and 3 verified
-`WonderPrompt.txt`, mirrored at `OpenCnid/axes-of-wonder` from
+`WonderPrompt.txt` (public, at `OpenCnid/axes-of-wonder`) from
 `gusthemole/WonderSuite` (GPL-3.0), read in full. It is a 10 KB system prompt
 titled "Topological Meta-Prompt Engineering Framework." Both practices trace, and
 the document settles two further questions the curriculum could not.
@@ -233,7 +233,7 @@ That relationship is currently stated nowhere.
 
 ### Open — awaiting Cnid
 - **Licence: WonderSuite is GPL-3.0; this repository is CC BY 4.0.** Practices 1
-  and 3 descend from `WonderPrompt.txt`, mirrored at `OpenCnid/axes-of-wonder`
+  and 3 descend from `WonderPrompt.txt` (public, at `OpenCnid/axes-of-wonder`)
   from `gusthemole/WonderSuite` under GPL-3.0. The skill reproduces none of that
   document's text — the practices are short paraphrases of its Purpose Mapping
   and Coherence Calibration steps, and method is not expression — so this is
